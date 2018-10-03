@@ -59,3 +59,46 @@ h2 {
     font-size: 10px * $j;
   }
 }
+
+// @each to Map over items in a List
+@each $color in blue, black, red {
+  .#{$color}-bg {
+    background-color: $color;
+  }
+}
+
+div {
+  height: 200px;
+  width: 200px;
+}
+
+// another example
+$colors: (
+  color1: blue,
+  color2: red,
+  color3: green
+);
+
+@each $key, $color in $colors {
+  .#{$color}-text {
+    color: $color;
+  }
+}
+
+/*
+Note that the $key variable is needed to reference the keys in the map. Otherwise, the compiled CSS would have color1, color2... in it.
+
+Output
+.blue-text {
+  color: blue;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
+
+*/
