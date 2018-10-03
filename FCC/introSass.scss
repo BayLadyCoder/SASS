@@ -52,3 +52,10 @@ h2 {
   background-color: red;
   @include border-stroke(medium);
 }
+
+// @for Loop
+@for $j from 1 to 6 {
+  .text-#{$j} {
+    font-size: 10px * $j;
+  }
+}
