@@ -1,0 +1,9 @@
+// Create and use variables
+$text-color: red;
+$main-fonts: Arial,
+sans-serif;
+
+h2 {
+    color: $text-color;
+    font-family: $main-fonts;
+}
