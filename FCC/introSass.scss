@@ -1,9 +1,19 @@
 // Create and use variables
 $text-color: red;
-$main-fonts: Arial,
-sans-serif;
+$main-fonts: Arial, sans-serif;
 
 h2 {
-    color: $text-color;
-    font-family: $main-fonts;
+  color: $text-color;
+  font-family: $main-fonts;
+}
+
+// Nesting
+.blog-post {
+  h1 {
+    text-align: center;
+    color: blue;
+  }
+  p {
+    font-size: 20px;
+  }
 }
